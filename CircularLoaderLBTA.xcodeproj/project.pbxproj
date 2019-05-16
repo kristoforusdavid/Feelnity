@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		775DD5E3228D697C00E6B01C /* Serenity-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 775DD5E1228D697C00E6B01C /* Serenity-2.mp3 */; };
+		775DD5E4228D697C00E6B01C /* Serenity.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 775DD5E2228D697C00E6B01C /* Serenity.mp3 */; };
 		C71C9A691FDB2933004A20EB /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71C9A681FDB2933004A20EB /* AppDelegate.swift */; };
 		C71C9A6B1FDB2933004A20EB /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C71C9A6A1FDB2933004A20EB /* ViewController.swift */; };
 		C71C9A6E1FDB2933004A20EB /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C71C9A6C1FDB2933004A20EB /* Main.storyboard */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		775DD5E1228D697C00E6B01C /* Serenity-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Serenity-2.mp3"; sourceTree = "<group>"; };
+		775DD5E2228D697C00E6B01C /* Serenity.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Serenity.mp3; sourceTree = "<group>"; };
 		C71C9A651FDB2933004A20EB /* CircularLoaderLBTA.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CircularLoaderLBTA.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		C71C9A681FDB2933004A20EB /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		C71C9A6A1FDB2933004A20EB /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -37,6 +41,15 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		775DD5E0228D694200E6B01C /* Music */ = {
+			isa = PBXGroup;
+			children = (
+				775DD5E1228D697C00E6B01C /* Serenity-2.mp3 */,
+				775DD5E2228D697C00E6B01C /* Serenity.mp3 */,
+			);
+			path = Music;
+			sourceTree = "<group>";
+		};
 		C71C9A5C1FDB2933004A20EB = {
 			isa = PBXGroup;
 			children = (
@@ -62,6 +75,7 @@
 				C71C9A6F1FDB2933004A20EB /* Assets.xcassets */,
 				C71C9A711FDB2933004A20EB /* LaunchScreen.storyboard */,
 				C71C9A741FDB2933004A20EB /* Info.plist */,
+				775DD5E0228D694200E6B01C /* Music */,
 				C79EA3C11FDF40B2009414C1 /* Extensions.swift */,
 			);
 			path = CircularLoaderLBTA;
@@ -100,6 +114,11 @@
 					C71C9A641FDB2933004A20EB = {
 						CreatedOnToolsVersion = 9.2;
 						ProvisioningStyle = Automatic;
+						SystemCapabilities = {
+							com.apple.BackgroundModes = {
+								enabled = 1;
+							};
+						};
 					};
 				};
 			};
@@ -128,7 +147,9 @@
 			files = (
 				C71C9A731FDB2933004A20EB /* LaunchScreen.storyboard in Resources */,
 				C71C9A701FDB2933004A20EB /* Assets.xcassets in Resources */,
+				775DD5E3228D697C00E6B01C /* Serenity-2.mp3 in Resources */,
 				C71C9A6E1FDB2933004A20EB /* Main.storyboard in Resources */,
+				775DD5E4228D697C00E6B01C /* Serenity.mp3 in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
