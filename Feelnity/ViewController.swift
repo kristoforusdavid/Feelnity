@@ -7,10 +7,16 @@
 //
 
 import UIKit
+import AVFoundation
 
 class ViewController: UIViewController {
+    var audioPlayer = AVAudioPlayer()
+    var shapeLayer: CAShapeLayer!
+    var pulsatingCircle: CAShapeLayer!
+    var isPlay: Bool = false
 
     override func viewDidLoad() {
+        
         super.viewDidLoad()
         // Do any additional setup after loading the view.
     }

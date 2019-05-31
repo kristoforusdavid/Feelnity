@@ -12,6 +12,8 @@
 		7725DDBE22A10C0E00EAD79B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7725DDBC22A10C0E00EAD79B /* Main.storyboard */; };
 		7725DDC022A10C0F00EAD79B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 7725DDBF22A10C0F00EAD79B /* Assets.xcassets */; };
 		7725DDC322A10C0F00EAD79B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 7725DDC122A10C0F00EAD79B /* LaunchScreen.storyboard */; };
+		7725DDCD22A10CA800EAD79B /* Serenity.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7725DDCB22A10CA700EAD79B /* Serenity.mp3 */; };
+		7725DDCE22A10CA800EAD79B /* Serenity-2.mp3 in Resources */ = {isa = PBXBuildFile; fileRef = 7725DDCC22A10CA800EAD79B /* Serenity-2.mp3 */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +24,8 @@
 		7725DDBF22A10C0F00EAD79B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		7725DDC222A10C0F00EAD79B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		7725DDC422A10C0F00EAD79B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		7725DDCB22A10CA700EAD79B /* Serenity.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = Serenity.mp3; sourceTree = "<group>"; };
+		7725DDCC22A10CA800EAD79B /* Serenity-2.mp3 */ = {isa = PBXFileReference; lastKnownFileType = audio.mp3; path = "Serenity-2.mp3"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,6 +58,7 @@
 		7725DDB722A10C0E00EAD79B /* Feelnity */ = {
 			isa = PBXGroup;
 			children = (
+				7725DDCA22A10C1F00EAD79B /* Music Assets */,
 				7725DDB822A10C0E00EAD79B /* AppDelegate.swift */,
 				7725DDBA22A10C0E00EAD79B /* ViewController.swift */,
 				7725DDBC22A10C0E00EAD79B /* Main.storyboard */,
@@ -62,6 +67,15 @@
 				7725DDC422A10C0F00EAD79B /* Info.plist */,
 			);
 			path = Feelnity;
+			sourceTree = "<group>";
+		};
+		7725DDCA22A10C1F00EAD79B /* Music Assets */ = {
+			isa = PBXGroup;
+			children = (
+				7725DDCC22A10CA800EAD79B /* Serenity-2.mp3 */,
+				7725DDCB22A10CA700EAD79B /* Serenity.mp3 */,
+			);
+			path = "Music Assets";
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -123,6 +137,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				7725DDC322A10C0F00EAD79B /* LaunchScreen.storyboard in Resources */,
+				7725DDCE22A10CA800EAD79B /* Serenity-2.mp3 in Resources */,
+				7725DDCD22A10CA800EAD79B /* Serenity.mp3 in Resources */,
 				7725DDC022A10C0F00EAD79B /* Assets.xcassets in Resources */,
 				7725DDBE22A10C0E00EAD79B /* Main.storyboard in Resources */,
 			);
