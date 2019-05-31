@@ -21,9 +21,9 @@ class ViewController: UIViewController{
     
     let percentageLabel: UILabel = {
         let label = UILabel()
-        label.text = "Enjoy"
+        label.text = "😇"
         label.textAlignment = .center
-        label.font = UIFont.boldSystemFont(ofSize: 32)
+        label.font = UIFont.boldSystemFont(ofSize: 92)
         label.textColor = .white
         return label
     }()
@@ -78,18 +78,12 @@ class ViewController: UIViewController{
             print(error)
         }
     
-        //setupNotificationObservers()
-        
-        //self.view.backgroundColor = #colorLiteral(red: 0, green: 0.9768045545, blue: 0.8095836901, alpha: 0.7993899829)
-        
-        //Bakground Options Solid or Gradient :
-        
-        //view.backgroundColor = UIcolor.backgroundColor
+ 
         let layer1 = CAGradientLayer()
         layer1.frame = view.bounds
         layer1.colors = [UIColor.yellow.cgColor, UIColor.green.cgColor, UIColor.yellow.cgColor]
-        layer1.startPoint = CGPoint(x: 0, y: 0)
-        layer1.endPoint = CGPoint(x:1, y:1)
+        layer1.startPoint = CGPoint(x: 0, y: 0.5)
+        layer1.endPoint = CGPoint(x:1, y: 0.5)
         view.layer.addSublayer(layer1)
         
         setupCircleLayers()
@@ -135,8 +129,7 @@ class ViewController: UIViewController{
         
         pulsatingLayer.add(animation, forKey: "Pulsing")
     }
-    
-//    let urlString = "https://firebasestorage.googleapis.com/v0/b/firestorechat-e64ac.appspot.com/o/intermediate_training_rec.mp4?alt=media&token=e20261d0-7219-49d2-b32d-367e1606500c"
+
     
     // Progress Bar
     private func beginPlayMusic() {
@@ -144,15 +137,6 @@ class ViewController: UIViewController{
         
         shapeLayer.strokeEnd = 00
         
-        //let configuration = URLSessionConfiguration.default
-        //let operationQueue = OperationQueue()
-//        let urlSession = URLSession(configuration: configuration, delegate: self, delegateQueue: operationQueue)
-        
-//        guard let url = URL(string: urlString) else { return }
-//        let downloadTask = urlSession.downloadTask(with: url)
-//        downloadTask.resume()
-       // let percentage = Float.random(in: 1...100)/100
-       
         
         //Init Music Player
         
@@ -168,31 +152,22 @@ class ViewController: UIViewController{
         }
     }
     
-//    func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didWriteData bytesWritten: Int64, totalBytesWritten: Int64, totalBytesExpectedToWrite: Int64) {
-//        let percentage = CGFloat(totalBytesWritten) / CGFloat(totalBytesExpectedToWrite)
-//
-//        DispatchQueue.main.async {
-//            self.percentageLabel.text = "\(Int(percentage * 100))%"
-//            self.shapeLayer.strokeEnd = percentage
-//        }
-    
-//        print(percentage)
-//    }
-    
-    //func urlSession(_ session: URLSession, downloadTask: URLSessionDownloadTask, didFinishDownloadingTo location: URL) {
-        //print("Finished playing file")
-   // }
+
     
     fileprivate func animateCircle() {
         let basicAnimation = CABasicAnimation(keyPath: "strokeEnd")
         
         let durasi = audioPlayer.duration
         basicAnimation.toValue = 1
-        
+       //set loader sesuai durasi lagu
         basicAnimation.duration = durasi
         
         basicAnimation.fillMode = kCAFillModeForwards
         basicAnimation.isRemovedOnCompletion = false
+        
+        //loader kembali seperti semula
+        shapeLayer.speed = 0.8
+        shapeLayer.timeOffset = 0
         
         shapeLayer.add(basicAnimation, forKey: "urSoBasic")
     }
@@ -209,6 +184,9 @@ class ViewController: UIViewController{
         {
             audioPlayer.stop()
             isPlay = false
+            let pausedTime : CFTimeInterval = shapeLayer.convertTime(CACurrentMediaTime(), from: nil)  //ambil waktu saat pause
+            shapeLayer.speed = 0.0 //speed jadi 0 seakan-akan loader di stop
+            shapeLayer.timeOffset = pausedTime //set progress loader jadi waktu saat pause
         }
         
     }
