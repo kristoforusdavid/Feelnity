@@ -14,6 +14,7 @@ class ViewController: UIViewController {
     var shapeLayer: CAShapeLayer!
     var pulsatingCircle: CAShapeLayer!
     var isPlay: Bool = false
+    //
 
     override func viewDidLoad() {
         
